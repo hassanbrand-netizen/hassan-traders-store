@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10251d">
+<meta name="description" content="Hassan Traders — quality products, fair prices, easy ordering.">
+<title>Hassan Traders | Online Store</title>
+<style>
+:root{--ink:#14251e;--green:#174b37;--lime:#c9f36b;--paper:#f6f7f2;--muted:#68756d;--line:#e4e8df;--white:#fff;--shadow:0 14px 40px #10251d12}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select{font:inherit}button,a{-webkit-tap-highlight-color:transparent}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 36px));margin:auto}
+header{background:#10251d;color:white;position:sticky;top:0;z-index:10;border-bottom:1px solid #ffffff1b}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:11px;font-weight:850;letter-spacing:-.5px;font-size:19px}.brandmark{height:39px;width:39px;display:grid;place-items:center;border-radius:13px;background:var(--lime);color:var(--ink);font-weight:950;font-size:20px}.navlinks{display:flex;gap:25px;color:#d1ddd5;font-size:14px}.navlinks a:hover{color:var(--lime)}.cartbtn{border:1px solid #ffffff38;background:#ffffff0c;color:white;border-radius:999px;padding:10px 15px;cursor:pointer}.cartcount{display:inline-grid;place-items:center;min-width:21px;height:21px;margin-left:5px;background:var(--lime);color:var(--ink);border-radius:50%;font-size:12px;font-weight:800}
+.hero{background:var(--green);color:white;overflow:hidden;position:relative}.hero:after{content:"";position:absolute;width:440px;height:440px;border:1px solid #ffffff1c;border-radius:50%;right:-90px;top:-150px;box-shadow:0 0 0 45px #ffffff08,0 0 0 90px #ffffff06;pointer-events:none}.hero-inner{padding:70px 0 75px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:30px;position:relative;z-index:1}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--lime);font-size:12px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase}.eyebrow:before{content:"";width:22px;height:2px;background:var(--lime)}h1{font-size:clamp(42px,6.4vw,76px);line-height:.99;letter-spacing:-3.5px;margin:19px 0 20px;max-width:650px}.hero p{color:#d5e1d9;line-height:1.7;max-width:500px;font-size:16px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}.btn{border:0;border-radius:999px;padding:13px 19px;font-weight:800;cursor:pointer;transition:transform .15s,opacity .15s}.btn:hover{transform:translateY(-1px)}.btn-primary{background:var(--lime);color:var(--ink)}.btn-ghost{border:1px solid #ffffff55;background:transparent;color:white}.hero-art{min-height:310px;display:grid;place-items:center;position:relative}.orb{width:min(320px,78vw);aspect-ratio:1;border-radius:50%;background:linear-gradient(145deg,#e4f6bd,#a8d75e);display:grid;place-items:center;box-shadow:inset -20px -24px 60px #42732922,0 35px 70px #061a123b;transform:rotate(-8deg)}.boxart{width:56%;aspect-ratio:1;display:grid;place-items:center;background:#fffdf3;border-radius:22px;box-shadow:14px 18px 0 #547c34;transform:rotate(8deg);font-size:clamp(64px,9vw,100px)}.float-tag{position:absolute;right:0;bottom:35px;background:white;color:var(--ink);border-radius:16px;padding:13px 17px;box-shadow:var(--shadow);font-size:13px;font-weight:800}.float-tag span{display:block;color:var(--muted);font-weight:500;font-size:11px;margin-top:3px}
+.trust{background:white;border-bottom:1px solid var(--line)}.trustrow{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;padding:19px 0}.trustitem{display:flex;align-items:center;justify-content:center;gap:10px;font-size:13px;font-weight:750}.trustitem b{font-size:20px}
+.section{padding:65px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:25px}.kicker{color:#5a7d37;text-transform:uppercase;letter-spacing:1.6px;font-size:11px;font-weight:850}.section h2{font-size:clamp(28px,4vw,40px);letter-spacing:-1.6px;margin:7px 0 0}.sub{color:var(--muted);font-size:14px;line-height:1.6;margin:9px 0 0}.searchbox{display:flex;align-items:center;gap:8px;background:white;border:1px solid var(--line);border-radius:999px;padding:0 15px;width:min(280px,100%)}.searchbox input{border:0;outline:0;padding:12px 0;width:100%;background:transparent}.filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:22px}.filter{border:1px solid var(--line);background:white;color:var(--muted);padding:9px 15px;border-radius:999px;font-size:13px;cursor:pointer}.filter.active{background:var(--ink);color:white;border-color:var(--ink)}
+.products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}.product{background:white;border:1px solid var(--line);border-radius:19px;overflow:hidden;transition:transform .2s,box-shadow .2s}.product:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.product-visual{height:190px;display:grid;place-items:center;position:relative;background:linear-gradient(145deg,#edf1e7,#f8f9f5);font-size:76px}.product-visual .tag{position:absolute;top:12px;left:12px;border-radius:999px;background:white;padding:6px 9px;font-size:10px;letter-spacing:.5px;font-weight:850}.product-body{padding:15px}.category{font-size:11px;color:#738076;text-transform:uppercase;letter-spacing:1px;font-weight:800}.product h3{font-size:16px;margin:7px 0 5px}.product-desc{color:var(--muted);font-size:12px;min-height:32px;line-height:1.5}.product-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:15px}.price{font-weight:900;font-size:17px}.add{border:0;border-radius:50%;width:37px;height:37px;background:var(--ink);color:white;font-size:22px;cursor:pointer}.add:hover{background:var(--green)}.empty{grid-column:1/-1;padding:35px;text-align:center;color:var(--muted);background:white;border-radius:15px}
+.promo{padding:0 0 65px}.promo-box{background:#e8f0dc;border-radius:25px;padding:32px 36px;display:flex;align-items:center;justify-content:space-between;gap:20px}.promo-box h2{font-size:clamp(24px,3vw,34px);letter-spacing:-1px;margin:0 0 8px}.promo-box p{margin:0;color:#5b6b5d;font-size:14px;line-height:1.6}.promo-box .btn{background:var(--ink);color:white;white-space:nowrap}
+footer{background:#10251d;color:white;padding:40px 0 25px}.foot-top{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap;padding-bottom:28px}.foot-copy{color:#b9c9be;font-size:13px;line-height:1.7;max-width:350px}.foot-title{font-weight:850;margin-bottom:10px}.foot-links{display:grid;gap:9px;color:#c6d4ca;font-size:13px}.foot-bottom{border-top:1px solid #ffffff20;padding-top:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#aebeb3;font-size:12px}
+.overlay{position:fixed;inset:0;background:#07150fc0;z-index:20;display:none;justify-content:flex-end}.overlay.open{display:flex}.drawer{width:min(440px,100%);height:100%;background:var(--paper);padding:23px;display:flex;flex-direction:column;box-shadow:-20px 0 60px #0002}.drawer-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:18px;border-bottom:1px solid var(--line)}.drawer-head h2{margin:0;font-size:24px}.close{border:0;background:#e8ece4;width:38px;height:38px;border-radius:50%;font-size:23px;cursor:pointer}.cart-items{overflow:auto;flex:1;padding:12px 0}.cart-line{display:grid;grid-template-columns:52px 1fr auto;gap:12px;align-items:center;padding:13px 0;border-bottom:1px solid var(--line)}.cart-emoji{width:52px;height:52px;border-radius:13px;background:#e9efe1;display:grid;place-items:center;font-size:27px}.cart-line h4{margin:0 0 5px;font-size:14px}.cart-line small{color:var(--muted)}.qty{display:flex;align-items:center;gap:9px;margin-top:7px}.qty button{border:1px solid var(--line);background:white;border-radius:50%;width:25px;height:25px;cursor:pointer}.remove{border:0;background:transparent;color:#8a5a4e;font-size:12px;cursor:pointer;margin-top:4px}.cart-total{border-top:1px solid var(--line);padding-top:18px}.totalrow{display:flex;justify-content:space-between;font-weight:900;font-size:19px;margin-bottom:7px}.hint{font-size:12px;color:var(--muted);line-height:1.5;margin:8px 0 15px}.checkout{width:100%;background:var(--ink);color:white}.empty-cart{text-align:center;color:var(--muted);padding:45px 10px;line-height:1.7}.checkout-form{display:grid;gap:10px;margin-top:13px}.checkout-form input,.checkout-form textarea,.checkout-form select{width:100%;border:1px solid var(--line);border-radius:12px;background:white;padding:12px;outline-color:#9bc85a}.checkout-form textarea{resize:vertical;min-height:70px}.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;z-index:40;background:var(--ink);color:white;padding:12px 18px;border-radius:999px;font-size:13px;box-shadow:var(--shadow);transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:850px){.hero-inner{grid-template-columns:1fr .7fr;padding:56px 0}.products{grid-template-columns:repeat(2,minmax(0,1fr))}.product-visual{height:170px}.navlinks{gap:14px}.hero-art{min-height:250px}}
+@media(max-width:600px){.wrap{width:min(100% - 28px,1160px)}.nav{height:66px}.navlinks{display:none}.brand{font-size:17px}.hero-inner{grid-template-columns:1fr;padding:48px 0 30px;gap:0}.hero-art{min-height:230px}.orb{width:215px}.float-tag{right:7%;bottom:17px}.hero:after{right:-240px}.hero h1{letter-spacing:-2.5px}.trustrow{gap:8px;padding:15px 0}.trustitem{font-size:10px;flex-direction:column;gap:4px;text-align:center}.trustitem b{font-size:19px}.section{padding:47px 0}.section-head{align-items:start;flex-direction:column}.searchbox{width:100%}.products{gap:11px}.product{border-radius:15px}.product-visual{height:140px;font-size:56px}.product-body{padding:12px}.product h3{font-size:14px}.product-desc{font-size:11px;min-height:31px}.price{font-size:15px}.add{width:33px;height:33px}.promo{padding-bottom:45px}.promo-box{padding:25px 21px;align-items:start;flex-direction:column}.foot-top{display:grid;grid-template-columns:1fr 1fr}.foot-top>div:first-child{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="Hassan Traders home"><span class="brandmark">H</span><span>HASSAN TRADERS</span></a>
+    <nav class="navlinks" aria-label="Main navigation"><a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+    <button class="cartbtn" id="openCart" aria-label="Open shopping cart">🛒 Cart <span class="cartcount" id="cartCount">0</span></button>
+  </div>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="eyebrow">Your one-stop variety store</span>
+      <h1>More choice. Better everyday <span style="color:var(--lime)">value.</span></h1>
+      <p>Welcome to Hassan Traders — explore everyday essentials, home items, accessories, fashion, electronics and more, all in one place.</p>
+      <div class="actions"><a class="btn btn-primary" href="#shop">Shop products ↗</a><a class="btn btn-ghost" href="#about">Why shop with us?</a></div>
+    </div>
+    <div class="hero-art" aria-label="Shopping box illustration"><div class="orb"><div class="boxart">🛍️</div></div><div class="float-tag">Your next great find<span>Just a few clicks away</span></div></div>
+  </div>
+</section>
+<div class="trust"><div class="wrap trustrow"><div class="trustitem"><b>✓</b><span>Carefully selected products</span></div><div class="trustitem"><b>♡</b><span>Customer-first service</span></div><div class="trustitem"><b>↗</b><span>Easy WhatsApp ordering</span></div></div></div>
+<section class="section" id="shop">
+  <div class="wrap">
+    <div class="section-head"><div><div class="kicker">The collection</div><h2>Shop popular picks</h2><p class="sub">Browse sample products across different categories. Sample items and prices must be checked and replaced before launch.</p></div><label class="searchbox">⌕ <input id="search" type="search" placeholder="Search products..." aria-label="Search products"></label></div>
+    <div class="filters" id="filters"><button class="filter active" data-category="All">All products</button><button class="filter" data-category="Grocery">Grocery</button><button class="filter" data-category="Home">Home</button><button class="filter" data-category="Accessories">Accessories</button><button class="filter" data-category="Electronics">Electronics</button><button class="filter" data-category="Fashion">Fashion</button><button class="filter" data-category="Lifestyle">Lifestyle</button></div>
+    <div class="products" id="products"></div>
+  </div>
+</section>
+<section class="promo" id="about"><div class="wrap"><div class="promo-box"><div><h2>Good service starts with a simple order.</h2><p>Have a question about a product? Send us your order or enquiry on WhatsApp.<br>Replace the demo contact number with your own before publishing.</p></div><a href="#contact" class="btn">Contact Hassan Traders ↗</a></div></div></section>
+</main>
+<footer id="contact"><div class="wrap"><div class="foot-top">
+  <div><a class="brand" href="#home"><span class="brandmark">H</span><span>HASSAN TRADERS</span></a><p class="foot-copy">A modern, easy-to-use online shop concept. A variety store for grocery, home products, accessories, fashion, electronics and more. Contact us to confirm stock and delivery.</p></div>
+  <div><div class="foot-title">Explore</div><div class="foot-links"><a href="#shop">All products</a><a href="#about">About us</a><a href="#contact">Contact</a></div></div>
+  <div><div class="foot-title">Customer care</div><div class="foot-links"><a href="#contact">Order enquiries</a><a href="#contact">Delivery questions</a><span>Mon–Sat · 9am–6pm</span></div></div>
+</div><div class="foot-bottom"><span>© <span id="year"></span> Hassan Traders. All rights reserved.</span><span>Made for easy shopping ♡</span></div></div></footer>
+
+<div class="overlay" id="cartOverlay" role="dialog" aria-modal="true" aria-label="Shopping cart">
+  <aside class="drawer">
+    <div class="drawer-head"><h2>Your cart <span style="color:var(--muted);font-size:15px" id="cartSubtitle"></span></h2><button class="close" id="closeCart" aria-label="Close cart">×</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-total" id="cartTotal" hidden>
+      <div class="totalrow"><span>Total</span><span id="totalPrice">Rs 0</span></div>
+      <p class="hint">Sample prices only. Confirm stock, actual prices and delivery charges with the seller.</p>
+      <form class="checkout-form" id="checkoutForm">
+        <input id="customerName" placeholder="Your full name" required maxlength="80">
+        <input id="customerPhone" type="tel" placeholder="Phone number" required maxlength="30">
+        <textarea id="customerAddress" placeholder="Delivery address in Pakistan" required maxlength="300"></textarea>
+        <select id="payment"><option>Cash on delivery (confirm with seller)</option><option>Bank transfer (confirm with seller)</option></select>
+        <button class="btn checkout" type="submit">Prepare order message ↗</button>
+      </form>
+    </div>
+  </aside>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script>
+/* SETUP: replace the number below with your WhatsApp number including country code, without + or spaces.
+   Pakistan example format: 923001234567 */
+const WHATSAPP_NUMBER = ""; // Add your own WhatsApp number before launch.
+const PRODUCTS = [
+  {id:1,name:"Everyday Grocery Pack",category:"Grocery",price:1499,emoji:"🛒",tag:"DAILY NEEDS",desc:"A sample everyday essentials bundle.",bg:"#e9eee2"},
+  {id:2,name:"Storage Container Set",category:"Home",price:1299,emoji:"🥣",tag:"HOME PICK",desc:"Keep kitchen items organised.",bg:"#ece8e1"},
+  {id:3,name:"Insulated Water Bottle",category:"Lifestyle",price:999,emoji:"🧴",tag:"ESSENTIAL",desc:"A handy bottle for daily use.",bg:"#e1edf0"},
+  {id:4,name:"Desk Organizer",category:"Home",price:899,emoji:"🗂️",tag:"SMART PICK",desc:"Keep your workspace tidy.",bg:"#eee7dc"},
+  {id:5,name:"Wireless Earbuds",category:"Electronics",price:2499,emoji:"🎧",tag:"TECH",desc:"A sample audio accessory listing.",bg:"#e7e5f0"},
+  {id:6,name:"Classic Wrist Watch",category:"Accessories",price:1999,emoji:"⌚",tag:"POPULAR",desc:"A simple everyday style accessory.",bg:"#f0e6df"},
+  {id:7,name:"Everyday Backpack",category:"Fashion",price:2199,emoji:"🎒",tag:"ON THE GO",desc:"A practical bag for everyday errands.",bg:"#e8ebdc"},
+  {id:8,name:"Sunglasses",category:"Fashion",price:1199,emoji:"🕶️",tag:"STYLE",desc:"A finishing touch for your look.",bg:"#f0e4e8"},
+  {id:9,name:"Cleaning Essentials",category:"Grocery",price:799,emoji:"🧽",tag:"HOME CARE",desc:"A sample household cleaning bundle.",bg:"#e4ece2"},
+  {id:10,name:"LED Desk Lamp",category:"Electronics",price:1899,emoji:"💡",tag:"USEFUL",desc:"A sample light for work or study.",bg:"#f1ecd9"},
+  {id:11,name:"Ceramic Mug",category:"Home",price:599,emoji:"☕",tag:"GIFT IDEA",desc:"A mug for your tea or coffee break.",bg:"#f0e6df"},
+  {id:12,name:"Travel Pouch",category:"Accessories",price:699,emoji:"👝",tag:"HANDY",desc:"Keep small essentials together.",bg:"#eee5eb"}
+];
+let cart = [];
+let activeCategory = "All";
+const money = n => "Rs " + n.toLocaleString("en-PK");
+const productsEl = document.getElementById("products");
+const toastEl = document.getElementById("toast");
+let toastTimer;
+function toast(message){toastEl.textContent=message;toastEl.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>toastEl.classList.remove("show"),2300)}
+function renderProducts(){
+  const query=document.getElementById("search").value.trim().toLowerCase();
+  const shown=PRODUCTS.filter(p=>(activeCategory==="All"||p.category===activeCategory)&&(p.name+" "+p.category+" "+p.desc).toLowerCase().includes(query));
+  productsEl.innerHTML=shown.length?shown.map(p=>`<article class="product"><div class="product-visual" style="background:${p.bg}"><span class="tag">${p.tag}</span><span aria-hidden="true">${p.emoji}</span></div><div class="product-body"><div class="category">${p.category}</div><h3>${p.name}</h3><div class="product-desc">${p.desc}</div><div class="product-bottom"><span class="price">${money(p.price)}</span><button class="add" data-add="${p.id}" aria-label="Add ${p.name} to cart">+</button></div></div></article>`).join(""):'<div class="empty">No products found. Try another search.</div>';
+}
+function renderCart(){
+  const count=cart.reduce((sum,item)=>sum+item.qty,0);
+  document.getElementById("cartCount").textContent=count;
+  document.getElementById("cartSubtitle").textContent=count?`(${count})`:"";
+  const itemsEl=document.getElementById("cartItems");
+  const total=cart.reduce((sum,item)=>sum+item.price*item.qty,0);
+  if(!cart.length){itemsEl.innerHTML='<div class="empty-cart"><div style="font-size:42px">🛒</div><strong>Your cart is empty</strong><br>Add a few products and they’ll appear here.</div>';document.getElementById("cartTotal").hidden=true;return}
+  itemsEl.innerHTML=cart.map(item=>`<div class="cart-line"><div class="cart-emoji">${item.emoji}</div><div><h4>${item.name}</h4><small>${money(item.price)} each</small><div class="qty"><button data-qty="${item.id}" data-change="-1" aria-label="Decrease quantity">−</button><span>${item.qty}</span><button data-qty="${item.id}" data-change="1" aria-label="Increase quantity">+</button></div></div><div style="text-align:right"><strong>${money(item.price*item.qty)}</strong><br><button class="remove" data-remove="${item.id}">Remove</button></div></div>`).join("");
+  document.getElementById("totalPrice").textContent=money(total);
+  document.getElementById("cartTotal").hidden=false;
+}
+productsEl.addEventListener("click",e=>{const b=e.target.closest("[data-add]");if(!b)return;const p=PRODUCTS.find(x=>x.id===Number(b.dataset.add));const existing=cart.find(x=>x.id===p.id);if(existing)existing.qty++;else cart.push({...p,qty:1});renderCart();toast(p.name+" added to cart")});
+document.getElementById("filters").addEventListener("click",e=>{const b=e.target.closest("[data-category]");if(!b)return;activeCategory=b.dataset.category;document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x===b));renderProducts()});
+document.getElementById("search").addEventListener("input",renderProducts);
+document.getElementById("cartItems").addEventListener("click",e=>{const q=e.target.closest("[data-qty]"),r=e.target.closest("[data-remove]");if(q){const item=cart.find(x=>x.id===Number(q.dataset.qty));if(item){item.qty+=Number(q.dataset.change);if(item.qty<=0)cart=cart.filter(x=>x.id!==item.id)}}else if(r){cart=cart.filter(x=>x.id!==Number(r.dataset.remove))}renderCart()});
+const overlay=document.getElementById("cartOverlay");
+function openCart(){overlay.classList.add("open");document.body.style.overflow="hidden"}
+function closeCart(){overlay.classList.remove("open");document.body.style.overflow=""}
+document.getElementById("openCart").addEventListener("click",openCart);
+document.getElementById("closeCart").addEventListener("click",closeCart);
+overlay.addEventListener("click",e=>{if(e.target===overlay)closeCart()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeCart()});
+document.getElementById("checkoutForm").addEventListener("submit",async e=>{
+  e.preventDefault();
+  if(!cart.length)return;
+  const name=document.getElementById("customerName").value.trim();
+  const phone=document.getElementById("customerPhone").value.trim();
+  const address=document.getElementById("customerAddress").value.trim();
+  const payment=document.getElementById("payment").value;
+  const lines=cart.map(x=>`• ${x.name} x ${x.qty} = ${money(x.price*x.qty)}`);
+  const total=cart.reduce((sum,x)=>sum+x.price*x.qty,0);
+  const message=`Assalam-o-Alaikum Hassan Traders! I would like to enquire about this order:\n\n${lines.join("\n")}\n\nTotal: ${money(total)}\n\nCustomer: ${name}\nPhone: ${phone}\nDelivery address: ${address}\nPayment preference: ${payment}\n\nPlease confirm availability, delivery charges and final order.`;
+  if(/^\d{10,15}$/.test(WHATSAPP_NUMBER)){
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,"_blank","noopener,noreferrer");
+  } else {
+    try { await navigator.clipboard.writeText(message); toast("Order message copied. Add your WhatsApp number in the code to enable direct ordering."); }
+    catch(err) { const w=window.open("","_blank"); if(w){w.document.write("<title>Hassan Traders order message</title><pre style='white-space:pre-wrap;font:16px system-ui;padding:20px'>"+message.replace(/&/g,"&amp;").replace(/</g,"&lt;")+"</pre>");} else {toast("WhatsApp number is not set. Add it in the code before launch.");} }
+  }
+});
+document.getElementById("year").textContent=new Date().getFullYear();
+renderProducts();renderCart();
+</script>
+</body>
+</html>
